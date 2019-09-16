@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style type="text/css"></style>
+</head>
+<body>
+
+<!--background-attachment：如果指定了 background-image ，那么
+background-attachment 决定背景是在视口中固定的还是随着包含它的区块滚动的-->
+
+
+<!--background-attachment: scroll-->
+<!--scroll 此关键字表示背景相对于元素本身固定， 而不是随着它的内容滚动。-->
+
+
+<!--background-attachment: local-->
+<!--local 此关键字表示背景相对于元素的内容固定。如果一个元素拥有滚动机制，-->
+<!--背景将会随着元素的内容滚动， 并且背景的绘制区域和定位区域是相对于可滚动的-->
+<!--区域而不是包含他们的边框。-->
+
+<!--background-attachment: fixed-->
+<!--fixed 此关键字表示背景相对于视口固定。即使一个元素拥有滚动机制，背景也不会随着元素的内容滚动。-->
+
+<!--主要靠fixed   ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+
+
+
+
+
+
+<div>
+    <section class="g-word">Header</section>
+    <section class="g-img1">IMG1</section>
+    <section class="g-word">Content1</section>
+    <section class="g-img2">IMG2</section>
+    <section class="g-word">Content2</section>
+    <section class="g-img3">IMG3</section>
+    <section class="g-word">Footer</section>
+</div>
+
+
+<style lang="scss">
+
+
+    section {
+        height: 100vh;
+        background: rgba(0, 0, 0, .7);
+        color: #fff;
+        line-height: 100vh;
+        text-align: center;
+        font-size: 10vh;
+    }
+
+    .g-img1 {
+        background-image: url('http://pic7.photophoto.cn/20080407/0034034859692813_b.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .g-img2 {
+        background-image: url('http://up.enterdesk.com/edpic_source/21/00/00/210000f8e772d7fc0758e67ae4b48807.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .g-img3 {
+        background-image: url('https://images.unsplash.com/photo-1440688807730-73e4e2169fb8?dpr=1&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center center;
+    }
+
+
+
+</style>
+</body>
+</html>
