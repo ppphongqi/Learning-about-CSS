@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>translate3d</title>
+</head>
+<body>
+<div class="g-container">
+    <div class="section-one">translateZ(-1)</div>
+    <div class="section-two">translateZ(-2)</div>
+    <div class="section-three">translateZ(-3)</div>
+</div>
+
+<!--总结就是父元素设置 transform-style: preserve-3d 和 perspective: 1px，-->
+<!--子元素设置不同的 transform: translateZ，滚动滚动条-->
+
+<style lang="scss">
+    html {
+        height: 1000px;
+        overflow: hidden;
+        font-size: 100px;
+    }
+
+    body {
+        perspective: 1px;
+        transform-style: preserve-3d;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .g-container {
+        height: 150%;
+    }
+    .section-one {
+        transform: translateZ(-1px);
+    }
+    .section-two {
+        transform: translateZ(-2px);
+    }
+    .section-three {
+        transform: translateZ(-3px);
+    }
+
+</style>
+
+
+</body>
+</html>
