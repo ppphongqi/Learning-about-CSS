@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta cahrset="utf-8">
+        <title>target选择器</title>
+
+    </head>
+
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background:#0ff;
+            margin:5px;
+            transition: flex 1s;
+
+        }
+        div:target{
+            flex:1;
+            background:purple;
+        }
+    </style>
+
+    <a href="#1">1</a>
+    <a href="#2">2</a>
+    <a href="#3">3</a>
+<main>
+    <div id="1"></div>
+    <div id="2"></div>
+    <div id="3"></div>
+</main>
+
+</html>
