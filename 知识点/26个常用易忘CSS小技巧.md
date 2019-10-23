@@ -128,3 +128,212 @@
     stransform:translateZ(0)
 }
 ```
+
+
+### 10.图片宽度自适应
+
+```
+img{max-width:100%}
+```
+
+### 11.Text-transform和Font Variant
+
+```
+p {text-transform: uppercase}  // 将所有字母变成大写字母
+p {text-transform: lowercase}  // 将所有字母变成小写字母
+p {text-transform: capitalize} // 首字母大写
+p {font-variant: small-caps}   // 将字体变成小型的大写字母
+
+
+```
+
+### 12.将一个容器设为透明
+```
+.wrap{
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity:0.5;
+    opacity:0.5;
+}
+```
+
+### 13.消除transition闪屏
+
+```
+.wrap {
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+```
+
+### 14.自定义滚动条
+
+```
+overflow-y:scroll;
+//整个滚动条
+::-webkit-scrollbar{
+    width:5px;
+
+}
+//滚动条的轨道
+::-webkit-scrollbar-track{
+    background-color:#ffa336;
+    border-radius:5px;
+}
+//滚动条的滑块
+::-webkit-scrollbar-thumb{
+    background-color:#ffc076;
+    border-radius:5px;
+}
+```
+
+### 15.让HTML识别string里的 '\n'并换行
+
+```
+body {
+  	white-space: pre-line;
+}
+```
+
+### 16.实现一个三角形
+
+```
+.wrap { 
+  border-color: transparent transparent green transparent; 
+  border-style: solid; 
+  border-width: 0px 300px 300px 300px; 
+  height: 0px; 
+  width: 0px; 
+}
+
+```
+
+### 17.移除被点链接的边框
+
+```
+a {outline: none}
+a {outline: 0}
+```
+### 18.使用CSS显示链接之后的URL
+```
+a:after{
+    content:"(" attr(href) ")";
+}
+```
+
+### 19.select内容居中显示、下拉内容右对齐
+
+```
+select{
+    text-align: center;
+    text-align-last: center;
+}
+select option {
+    direction: rtl;
+}
+```
+
+### 20.修改input输入框中光标的颜色不改变字体的颜色
+
+```
+input{
+    color:#fff;
+    caret-color:red;
+}
+```
+
+### 21.修改input输入框中placeholder默认字体样式
+```//webkit内核的浏览器 
+input::-webkit-input-placeholder {
+    color: #c2c6ce;
+}
+//Firefox版本4-18 
+input:-moz-placeholder {
+    color: #c2c6ce;
+}
+//Firefox版本19+
+input::-moz-placeholder {
+    color: #c2c6ce;
+}
+//IE浏览器
+input:-ms-input-placeholder {
+    color: #c2c6ce;
+}
+
+```
+
+### 22.子元素固定宽度 父元素宽度被撑开
+```
+// 父元素下的子元素是行内元素
+.wrap {
+  white-space: nowrap;
+}
+// 若父元素下的子元素是块级元素
+.wrap {
+  white-space: nowrap;  // 子元素不被换行
+  display: inline-block;
+}
+
+```
+### 23.让div里的图片和文字同时上下居中
+
+```
+.wrap {
+  height: 100,
+  line-height: 100
+}
+img {
+  vertival-align：middle
+}
+// vertical-align css的属性vertical-align用来指定行内元素（inline）或表格单元格（table-cell）元素的垂直对齐方式。只对行内元素、表格单元格元素生效，不能用它垂直对齐块级元素
+// vertical-align：baseline/top/middle/bottom/sub/text-top;
+
+```
+
+### 24.实现宽高等比例自适应矩形
+
+```
+        .scale {
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            position: relative; 
+        }
+
+        .item {
+            position: absolute; 
+            width: 100%;
+            height: 100%;
+            background-color: 499e56;
+        }    
+   <div class="scale">
+        <div class="item">
+            这里是所有子元素的容器
+        </div>
+    </div>
+
+
+```
+
+### 25.transfrom的rotate属性在span标签下失效
+
+```
+span {
+  display: inline-block
+}
+```
+
+### 26.边框字体同色
+
+```
+	.wrap {
+		width: 200px;
+		height: 200px;
+		color: #000;
+		font-size: 30px;
+		border: 50px solid currentColor;
+		// border: 50px solid; // 实现二
+	}
+
+```
